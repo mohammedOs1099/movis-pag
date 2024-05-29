@@ -1,0 +1,182 @@
+*{
+  box-sizing: border-box;
+}
+body{
+    overflow: hidden;
+    
+}
+
+/* nav bar */
+#navIcon i:hover{
+  cursor: pointer;
+
+} 
+nav ul li {
+  margin: .5rem;
+  padding: .3rem;
+  list-style:none;
+  animation: fadeOutLeft;
+  animation-duration: 1.5s;
+}
+nav ul li:hover {  
+  cursor: pointer;
+}
+
+#nav_ancor ul a:hover{
+  color:tomato;
+
+}
+#nav_bar{
+  position: fixed;
+  bottom: 0;
+  left: -165.738px;
+  top: 0;
+
+
+}
+
+
+
+
+/* nav bar */
+.contant .layer {
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    transition: all 1s;
+    background-color: rgba(5, 5, 5, .60);
+
+    animation: fadeOutLeft;
+    animation-duration: 1.5s;
+}
+
+.contant:hover .layer {
+    display: block !important;
+
+
+
+    animation: fadeInLeft;
+    animation-duration: 1.5s;
+}
+
+.contant:hover h2 {
+
+    animation-duration: 2s;
+}
+
+.contant img {
+    vertical-align: middle;
+    transition: all 2s;
+}
+
+.contant:hover img {
+    transform: scale(1.2);
+}
+
+.contant .circle p  {
+    
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: .4rem groove green;
+}
+
+.formiput{
+box-shadow: none;
+background-color: transparent;
+border-bottom: 1px solid #fff;
+border-color: #CED4DA;
+border-radius: 2;
+transition: all 0.5s;
+}
+
+form .row .col-md-6 input::placeholder {
+    color: white;
+}
+.search input{
+background-color: black;
+}
+.search input::placeholder{
+    color: #fff;
+}
+
+
+/* lod          ing        sc  reen */
+ #loding{
+  background-color: #000;
+  position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+ }
+.loader {
+    display: block;
+    width: 120px;
+    height: 80px;
+    position: relative;
+    transform: rotate(-90deg);
+    background: linear-gradient(174deg, #0000 49%,rgb(255, 255, 255) 50%, #0000 51%);
+  }
+  .loader:after,
+  .loader:before {
+
+    content: "";
+    border-radius: 100%;
+    width: 35px;
+    height: 35px;
+    display: block;
+    position: absolute;
+    border: 4px dashed wheat;
+    bottom: 49px;
+    transform: rotate(0deg);
+    box-sizing: border-box;
+    animation: tape 4s linear infinite;
+  
+  }
+  .loader:before {
+    right: -14px;
+    box-shadow: 0 0 0 4px #0000, 0 0 0 34px #fff , 0 0 5px 34px #fff;
+  }
+  .loader:after {
+    left: -13px;
+    box-shadow: 0 0 0 4px #000, 0 0 0 65px #fff, 0 0 5px 65px #fff;
+  }
+  
+  @keyframes tape {
+    0% { transform: rotate(0deg) scale(0.4) }
+    100% { transform: rotate(-360deg) scale(0.4) }
+  }
+        
+
+
+
+/* lod          ing        sc  reen */
+/* back to  top */
+#backToTop{
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 999999999999;
+  display: none;
+  
+
+}
+/* back to  top */
+
+@media  (min-width: 0px) and (max-width: 991.98px) {
+  
+}
+
+@media  (min-width: 992px) {
+  .navIcon{
+   background-color: white;
+  
+  }
+}

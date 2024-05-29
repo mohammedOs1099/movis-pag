@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>movies</title>
+    <link rel="shortcut icon" href="./img/logo1.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body class="bg-black text-white">
+    <div id="loding" class="   ">
+      <span class="loader"></span>
+    </div>
+    <nav>
+      <div id="nav_bar" class="navBar d-flex z-3">
+        <div
+          id="nav_ancor"
+          class="text-center bg-black d-flex flex-column justify-content-between"
+        >
+          <ul class="my-5">
+            <li><a id="btn" attr="now_playing">Now playing</a></li>
+            <li><a id="btn" attr="popular">Popular</a></li>
+            <li><a id="btn" attr="top_rated">Top Rated</a></li>
+            <li><a id="btn" attr="popular">Trending</a></li>
+            <li><a id="btn" attr="upcoming">Upcoming</a></li>
+            <li><a id="contactUs" section="#contact">Contact Us</a></li>
+          </ul>
+
+          <div class="copyrights">
+            <div class="rights-social">
+              <a href="#"><i class="text-white fa-brands fa-facebook-f"></i></a>
+              <a href="#"><i class="text-white fa-brands fa-twitter"></i></a>
+              <a href="#"><i class="text-white fa-solid fa-globe"></i></a>
+            </div>
+            <p class="p-2">
+              Copyright © 2022 All <br />
+              Rights Reserved.
+            </p>
+          </div>
+        </div>
+
+        <div
+          id="navIcon"
+          class="navIcon d-flex flex-column justify-content-between text-center"
+        >
+          <div class="logo my-2">
+            <img class="w-50" src="./img/logo1.png" alt="logo" />
+          </div>
+          <div class="icon text-dark text-center fa-2x">
+            <i id="open_close_nave" class="fa-solid fa-align-justify"></i>
+          </div>
+          <div
+            class="mediaicon d-flex flex-column text-center text-dark my-3 p-3"
+          >
+            <i class="fa-solid fa-globe p-2 my-2"></i>
+            <i class="fa-solid p-2 my-1 fa-share-nodes"></i>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div
+        class="search col-lg-6 col-md-6 col-sm-12 my-5 mx-auto pt-3 ps-3 pe-3"
+      >
+        <input
+          id="search"
+          class="form-control"
+          placeholder="search"
+          type="text"
+        />
+      </div>
+      <!--        diplay      -->
+      <section class="" id="display">
+        <div id="data-show" class="row g-3">
+          <div
+            class="col-lg-4 col-md-6 col-sm-12 animate__animated animate__zoomIn"
+          ></div>
+        </div>
+      </section>
+      <!-- con   ta   ct -->
+      <section id="contact" class="container text-white py-5">
+        <h2>Contact US</h2>
+        <form>
+          <div class="row mt-3">
+            <div class="col-md-6">
+              <input
+                type="text"
+                required=""
+                id="name"
+                maxlength="37"
+                class="formiput form-control mt-4"
+                placeholder="Enter Your Name"
+              />
+              <p
+                id="name-validate"
+                class="bg-danger text-white p-2 rounded-1 d-none"
+              >
+                Invalid Name! Name must Start with capital letter with atleast 2
+                chars!
+              </p>
+            </div>
+            <div class="col-md-6">
+              <input
+                type="email"
+                required=""
+                id="email"
+                class="formiput form-control mt-4"
+                placeholder="Enter Your Email"
+              />
+              <p
+                id="email-validate"
+                class="bg-danger text-white p-2 rounded-1 d-none"
+              >
+                Invalid email!
+              </p>
+            </div>
+            <div class="col-md-6">
+              <input
+                type="tel"
+                required=""
+                id="phone"
+                class="formiput form-control mt-4"
+                placeholder="Enter Your Phone"
+              />
+              <p
+                id="phone-validate"
+                class="bg-danger text-white p-2 rounded-1 d-none"
+              >
+                Invalid phone number!
+              </p>
+            </div>
+            <div class="col-md-6">
+              <input
+                type="number"
+                required=""
+                id="age"
+                class="formiput form-control mt-4"
+                placeholder="Enter Your Age"
+              />
+              <span class="error"></span>
+            </div>
+            <div class="col-md-6 position-relative">
+              <input
+                type="password"
+                required=""
+                id="password"
+                class="formiput form-control mt-4"
+                placeholder="Enter Your Password"
+              />
+              <p
+                id="password-validate"
+                class="bg-danger text-white p-2 rounded-1 d-none"
+              >
+                Invalid Password! Enter password starts with a capital letter
+                ,includes numbers,symbols & minimum 8 chars !
+              </p>
+              <span class="showPass" style="opacity: 0; bottom: -20px"
+                ><i data-show="show" class="fa-solid fa-eye-slash"></i
+              ></span>
+            </div>
+            <div class="col-md-6">
+              <input
+                type="password"
+                required=""
+                id="repassword"
+                class="formiput form-control mt-4"
+                placeholder="ReEnter Password"
+              />
+              <p
+                id="password-validate"
+                class="bg-danger text-white p-2 rounded-1 d-none"
+              >
+                Invalid Password! Enter password starts with a capital letter
+                ,includes numbers,symbols & minimum 8 chars !
+              </p>
+            </div>
+            <div class="col-md-12 mt-4">
+              <p
+                id="successSignup"
+                class="text-success text-center visually-hidden"
+              >
+                Your registration has been completed successfully! , You can now
+                log In.
+              </p>
+              <button
+                id="form-btn"
+                type="submit"
+                class="form-btn rounded-2 mb-3 btn btn-dark"
+              >
+                Submit
+              </button>
+            </div>
+          </div>
+        </form>
+      </section>
+    </div>
+    <div id="backToTop" class="backToTop">
+      <i class="btn border border-0"
+        ><span class="fas fa-circle-arrow-up fa-3x"></span>
+      </i>
+    </div>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+
+    <script src="./js/mine.js"></script>
+  </body>
+</html>
